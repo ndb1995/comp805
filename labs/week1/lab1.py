@@ -49,10 +49,14 @@ def check_is_less_than(number1, number2):
     	return(True)
     else:
 	return(False)
+
+#does factorial recursevily from number given in testing method
 def factorial(n):
     if n == 1:
         return (True)
     else:
         return n * factorial(n-1)
+    
+# gives an exponent of the number passed from the testing method
 def give_me_an_exponent(n):
     return(5**n)

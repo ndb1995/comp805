@@ -270,26 +270,25 @@ def test_factorial(results_dict):
     #Checks to see if the number is a factorial or not
     print("")
     print("Testing lab1.factorial()")
-    message = "----"
+    # I give the method a 4 so 4x3x2x1 should equal 24. I check to make sure that  the result returned from the method is in fact 24
     result = lab1.factorial(4)
     if(result == 24):
-	print("Factorial is correct")
+	print("Factorial is correct. Factorial of 4 returned 24.")
 	test_passed(results_dict)
     else:
-	print("Factorial incorrect")
+	print("Factorial incorrect". Factorial of 4 didn't return 24.)
 	test_failed(results_dict)
 
 def test_exponent(results_dict):
-    #Checks to see if the number is a factorial or not
+    #Checks to see if the number returned is an exponent or not
     print("")
     print("Testing lab1.factorial()")
-    message = "----"
     result = lab1.give_me_an_exponent(4)
-    if(result == 5**4):
-	print("Exponent is correct")
+    if(result == 625):
+	print("Exponent is correct. 5^4 returned 625.")
 	test_passed(results_dict)
     else:
-	print("Exponent is incorrect")   
+	print("Exponent is incorrect. 5^4 didn't return 625.")
 	test_failed(results_dict)
 
 def run():
