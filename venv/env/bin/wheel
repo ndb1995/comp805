@@ -1,4 +1,4 @@
-#!/home/nbielinski/workspace/venvs/env/bin/python
+#!/home/nbielinski/workspace/venv/env/bin/python3
 
 # -*- coding: utf-8 -*-
 import re

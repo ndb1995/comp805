@@ -1,4 +1,4 @@
-#!/home/nbielinski/workspace/venvs/env/bin/python
+#!/home/nbielinski/workspace/venv/env/bin/python
 
 import sys
 import getopt
