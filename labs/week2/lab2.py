@@ -24,3 +24,15 @@ def check_title(title_list):
             else:
                 title_listtitle = ""
     return(correct_list)
+
+def restock_inventory(inventory):
+    """
+    Increases inventory of each item in dictionary by 10
+    inventory: ad dictionary with:
+     key: string that is the name of the inventory item
+     value: integer that equals the number of that item currently on hand
+    Returns: updated dictionary where each inventory item is restocked
+    """
+    for key, value in inventory.iteritems():
+            inventory[key] = value + 10
+    return (inventory)
