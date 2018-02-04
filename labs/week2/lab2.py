@@ -33,7 +33,7 @@ def restock_inventory(inventory):
      value: integer that equals the number of that item currently on hand
     Returns: updated dictionary where each inventory item is restocked
     """
-    for key, value in inventory.iteritems():
+    for key, value in inventory.items():
             inventory[key] = value + 10
     return (inventory)
 
@@ -59,7 +59,7 @@ def average_grades(grades):
     Returns: dictionary that averages out the grades of each student
     """
     avg_grades = []
-    for key,value in grades.iteritems():
+    for key,value in grades.items():
         avg_grades.append(key)
         avg_grades.append(sum(value)/ float(len(value)))
     return (avg_grades)
