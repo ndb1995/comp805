@@ -14,3 +14,14 @@ print("\nThird Function:\n")
 print(lab2.restock_inventory({'pencil':10, 'pen':8, 'paper':7}))
 print(lab2.restock_inventory({'pencil':0, 'pen':-3, 'paper':-11}))
 print(lab2.restock_inventory({'pencil':0.5, 'pen':-3.2, 'paper':11.0}))
+
+
+print("\nFourth Function:\n")
+print(lab2.filter_0_items({'pencil':10, 'pen':8, 'paper':7}))
+print(lab2.filter_0_items({'pencil':0, 'pen':-3, 'paper':-11}))
+print(lab2.filter_0_items({'pencil':0.5, 'pen':-3.2, 'paper':0.0}))
+
+print("\nFifth Function:\n")
+print(lab2.average_grades({'Michael' :[100, 78, 88, 900/10], 'Daniel':[80, 95, 77, 64.0], 'Josh':[99, 89, 94, 66]}))
+print(lab2.average_grades({'Michael' :[5*20, 188 * .5, 88], 'Daniel':[80.5, .15, 66, 64.0], 'Josh':[99 + 1 * -2, 40/.5]}))
+print(lab2.average_grades({'Michael' :[78], 'Daniel':[90], 'Josh':[900/-9]}))
