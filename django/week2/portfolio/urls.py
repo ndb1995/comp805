@@ -20,6 +20,15 @@ from django.conf.urls import url
 
 from . import views
 
+"""
+I had to do my URL patterns using regex and URL
+because when I did it the default django 2.0 way using path
+when I clicked one of my links, it would append it to the end of the URL
+127.0.0.1:8000/resume/contact and then it wouldn't find the page
+because I don't have that URL pattern listed. Never had to worry about that
+using regex like in djnago 1.11 so I reverted to the older way
+"""
+
 urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^resume/$', views.resume, name='resume'),
