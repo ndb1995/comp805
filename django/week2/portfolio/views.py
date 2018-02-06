@@ -9,21 +9,21 @@ def home(request):
 
 def resume(request):
     """
-    Renders the home page
+    Renders the resume page
     """
     context = {}
     return render(request, 'resume.html', context)
 
 def portfolio(request):
     """
-    Renders the home page
+    Renders the portfolio page
     """
     context = {}
     return render(request, 'portfolio.html', context)
 
 def contact(request):
     """
-    Renders the home page
+    Renders the contact page
     """
     context = {}
     return render(request, 'contact.html', context)
