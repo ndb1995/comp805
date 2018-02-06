@@ -8,7 +8,7 @@ def squared_nums(num_list):
     squared_list = []
     for number in num_list:
         squared_list.append(number * number)
-    return squared_list
+    return(squared_list)
 
 def check_title(title_list):
     """
@@ -21,7 +21,9 @@ def check_title(title_list):
         if (type(title) != int):
             if (title.istitle()):
                 correct_list.append(title)
-    return correct_list
+            else:
+                title_listtitle = ""
+    return(correct_list)
 
 def restock_inventory(inventory):
     """
@@ -33,7 +35,7 @@ def restock_inventory(inventory):
     """
     for key, value in inventory.items():
             inventory[key] = value + 10
-    return inventory
+    return (inventory)
 
 def filter_0_items(inventory):
     """
@@ -46,7 +48,7 @@ def filter_0_items(inventory):
     for key in list(inventory.keys()):
             if (inventory[key] == 0):
                 del inventory[key]
-    return inventory
+    return (inventory)
 
 def average_grades(grades):
     """
@@ -60,4 +62,4 @@ def average_grades(grades):
     for key,value in grades.items():
         avg_grades.append(key)
         avg_grades.append(sum(value)/ float(len(value)))
-    return avg_grades
+    return (avg_grades)
