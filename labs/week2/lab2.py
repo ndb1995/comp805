@@ -40,7 +40,7 @@ def filter_0_items(inventory):
     Removes items that have a value of 0 from a dictionary of inventories
     inventory: dictionary with:
        key: tring that is the name of the inventory item
-       value: nteger that equals the number of that item currently on hand
+       value: integer that equals the number of that item currently on hand
     Returns: the same inventory_dict with any item that had 0 quantity removed
     """
     for key in list(inventory.keys()):
@@ -56,8 +56,6 @@ def average_grades(grades):
     value: list of integer grades received in class
     Returns: dictionary that averages out the grades of each student
     """
-    avg_grades = []
     for key,value in grades.items():
-        avg_grades.append(key)
-        avg_grades.append(sum(value)/ float(len(value)))
-    return avg_grades
+        grades[key] = sum(value)/ float(len(value))
+    return grades
