@@ -29,10 +29,20 @@ because I don't have that URL pattern listed. Never had to worry about that
 using regex like in djnago 1.11 so I reverted to the older way
 """
 
+"""
+The above is fixed now, just keep it for future reference
+path did not work previously because in my base.html I did not use template tags
+I used plain resume, which would then append the urls together
+"""
+
 urlpatterns = [
-    url(r'^$', views.home, name='home'),
-    url(r'^resume/$', views.resume, name='resume'),
-    url(r'^portfolio/$', views.portfolio, name='portfolio'),
-    url(r'^contact/$', views.contact, name='contact'),
+    #url(r'^$', views.home, name='home'),
+    #url(r'^resume/$', views.resume, name='resume'),
+    #url(r'^portfolio/$', views.portfolio, name='portfolio'),
+    #url(r'^contact/$', views.contact, name='contact'),
+    path('', views.home, name='home'),
+    path('resume/', views.resume, name='resume'),
+    path('portfolio/', views.portfolio, name='portfolio'),
+    path('contact/', views.contact, name='contact'),
     path('admin/', admin.site.urls),
 ]
