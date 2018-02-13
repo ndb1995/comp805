@@ -7,4 +7,5 @@ def display_experience_education(request):
     """
     all_education = education.objects.all()
     all_experience = experience.objects.all()
-    return render(request, 'resume.html', {'all_education': all_education,'all_experience': all_experience,})
+    context = {'all_education': all_education,'all_experience': all_experience,}
+    return render(request, 'resume.html', context)

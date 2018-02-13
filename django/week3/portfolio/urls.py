@@ -36,10 +36,6 @@ I used plain resume, which would then append the urls together
 """
 
 urlpatterns = [
-    #url(r'^$', views.home, name='home'),
-    #url(r'^resume/$', views.resume, name='resume'),
-    #url(r'^portfolio/$', views.portfolio, name='portfolio'),
-    #url(r'^contact/$', views.contact, name='contact'),
     path('', views.home, name='home'),
     path('portfolio/', views.portfolio, name='portfolio'),
     path('contact/', views.contact, name='contact'),
