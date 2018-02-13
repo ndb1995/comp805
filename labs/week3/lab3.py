@@ -38,6 +38,9 @@ def greatest_difference(num_list):
     Returns: the difference between the maximum and
     minimum numbers in num_list
     """
+    high = max(num_list)
+    low = min(num_list)
+    return "High %d minus low %d equals" % (high, low), high - low
 
 def make_title(words):
     """
