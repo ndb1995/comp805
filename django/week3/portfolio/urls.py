@@ -45,4 +45,5 @@ urlpatterns = [
     path('portfolio/', views.portfolio, name='portfolio'),
     path('contact/', views.contact, name='contact'),
     path('admin/', admin.site.urls),
+    path('resume/', include('resume.urls'))
 ]
