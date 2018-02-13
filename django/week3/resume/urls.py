@@ -20,6 +20,8 @@ from django.conf.urls import url
 
 from . import views
 
+app_name = "resume"
+
 """
 I had to do my URL patterns using regex and URL
 because when I did it the default django 2.0 way using path
@@ -36,6 +38,5 @@ I used plain resume, which would then append the urls together
 """
 
 urlpatterns = [
-    path('education', views.education_view, name='education'),
-    path('experience', views.experience_view, name='experience'),
+    path('', views.display_experience_education, name='index'),
 ]

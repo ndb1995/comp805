@@ -41,9 +41,8 @@ urlpatterns = [
     #url(r'^portfolio/$', views.portfolio, name='portfolio'),
     #url(r'^contact/$', views.contact, name='contact'),
     path('', views.home, name='home'),
-    path('resume/', views.resume, name='resume'),
     path('portfolio/', views.portfolio, name='portfolio'),
     path('contact/', views.contact, name='contact'),
     path('admin/', admin.site.urls),
-    path('resume/', include('resume.urls'), name='resume')
+    path('resume/', include('resume.urls', namespace='resume'))
 ]
