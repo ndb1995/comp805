@@ -133,6 +133,11 @@ def lessthan_5(num_list):
     Returns: list of numbers in the original list
     that are less than five
     """
+    lessthan = []
+    for num in num_list:
+        if num < 5:
+            lessthan.append(num)
+    return lessthan
 
 def subtraction_of(number_list):
     """
