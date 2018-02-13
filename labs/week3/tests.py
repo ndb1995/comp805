@@ -14,3 +14,12 @@ print (lab3.make_title([1,20,15,5,10,17,34,45,13,65]))
 
 print("\nFifth Function: Test Title\n")
 print (lab3.test_title(['Orange', 'Apple', 'pear', 'Strawberry', 'kiwi', 'apple', 'banana']))
+
+print("\nSixth Function: Create Word\n")
+print (lab3.create_word(['Orange', 'Apple', 'pear', 'Strawberry', 'kiwi', 'apple', 'banana']))
+
+print("\nSeventh Function: Three Times Number\n")
+print (lab3.three_times_nums([1,20,15,5,10,17,34,45,13,65]))
+
+print("\nEigth Function: Keep Lowercase\n")
+print (lab3.keep_lowercase(['OrANge', 'AppLe', 'pear', 'StrawBerry', 'kiwi', 'apple', 'banana']))

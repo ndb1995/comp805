@@ -50,7 +50,6 @@ def make_title(words):
     Returns:
     """
 
-
 def test_title(names):
     """
     Filters out capitalized and non- cap words into
@@ -83,6 +82,10 @@ def three_times_nums(num_list):
     Returns: list of numbers that are of three times
     the values in num_list
     """
+    three_times = []
+    for num in num_list:
+        three_times.append(num * 3)
+    return three_times
 
 def keep_lowercase(str_list):
     """
@@ -91,6 +94,11 @@ def keep_lowercase(str_list):
     Returns: list of strings that do not contain
     uppercase values
     """
+    lowercase = []
+    for word in str_list:
+        if not word.isupper():
+            lowercase.append(word)
+    return lowercase
 
 def multiplication_total_of(num_list):
     """
