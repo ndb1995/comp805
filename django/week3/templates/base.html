@@ -1,9 +1,17 @@
-<nav>
-  <a href="{% url 'home' %}">Home Page</a>
-  <a href="{% url 'resume:index' %}">Resume</a>
-  <a href="{% url 'portfolio' %}">Portfolio</a>
-  <a href="{% url 'contact' %}">Contact</a>
-
-</nav>
-{% block content %}
-{% endblock content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Week3</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'home' %}">Home Page</a>
+        <a href="{% url 'resume:index' %}">Resume</a>
+        <a href="{% url 'portfolio' %}">Portfolio</a>
+        <a href="{% url 'contact' %}">Contact</a>
+    </nav>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>
