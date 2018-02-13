@@ -23,3 +23,9 @@ print (lab3.three_times_nums([1,20,15,5,10,17,34,45,13,65]))
 
 print("\nEigth Function: Keep Lowercase\n")
 print (lab3.keep_lowercase(['ORANGE', 'APPLE', 'pear', 'STRAWBERRY', 'kiwi', 'apple', 'banana']))
+
+print("\nNinth Function: Multiplication Total Of\n")
+print (lab3.multiplication_total_of([1,20,15,5,10,17,34,45,13,65]))
+
+print("\nTenth Function: Square Nums\n")
+print (lab3.square_nums([1,20,15,5,10,17,34,45,13,65]))

@@ -108,6 +108,11 @@ def multiplication_total_of(num_list):
     Returns: the multiplied total of the numbers in
     the num_list
     """
+    product = 1
+    for num in num_list:
+        product *= num
+    return product
+
 
 def square_nums(number_list):
     """
@@ -116,6 +121,10 @@ def square_nums(number_list):
     number_list: list of numbers
     Returns: list from number_list which are squared
     """
+    squared_nums = []
+    for num in number_list:
+        squared_nums.append(num*num)
+    return squared_nums
 
 def lessthan_5(num_list):
     """
