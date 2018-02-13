@@ -8,3 +8,9 @@ print (lab3.only_even(['orange', 5, 'pear', 2, 'kiwi', 7, '10']))
 
 print("\nThird Function: Greatest Difference\n")
 print (lab3.greatest_difference([1,20,15,5,10,17,34,45,13,65]))
+
+print("\nFourth Function: Make Title\n")
+print (lab3.make_title([1,20,15,5,10,17,34,45,13,65]))
+
+print("\nFifth Function: Test Title\n")
+print (lab3.test_title(['Orange', 'Apple', 'pear', 'Strawberry', 'kiwi', 'apple', 'banana']))

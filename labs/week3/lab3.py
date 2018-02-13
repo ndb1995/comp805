@@ -50,6 +50,7 @@ def make_title(words):
     Returns:
     """
 
+
 def test_title(names):
     """
     Filters out capitalized and non- cap words into
@@ -57,6 +58,14 @@ def test_title(names):
     names: list of names
     Returns: both lists for review
     """
+    caps = []
+    non_caps = []
+    for name in names:
+        if name.istitle():
+            caps.append(name)
+        else:
+            non_caps.append(name)
+    return caps, non_caps
 
 def create_word(char_list):
     """
