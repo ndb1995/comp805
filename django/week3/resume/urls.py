@@ -36,6 +36,6 @@ I used plain resume, which would then append the urls together
 """
 
 urlpatterns = [
-    path('education', views.education, name='education'),
-    path('experience', views.experience, name='experience'),
+    path('education', views.education_view, name='education'),
+    path('experience', views.experience_view, name='experience'),
 ]

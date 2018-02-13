@@ -2,7 +2,7 @@ from django.contrib import admin
 from . models import education, experience
 
 
-class EdcuationAdmin(admin.ModelAdmin):
+class EducationAdmin(admin.ModelAdmin):
     model = education
     list_display = ('institution_name', 'location', 'degree', 'major', 'gpa')
 

@@ -4,5 +4,12 @@
 {% block content %}
 <h1>Experience</h1>
 
+{% for education in all_education %}
+    <p>Insitution Name: {{ education.title }}</p>
+    <p>Location: {{ education.location }}</p>
+    <p>Degree: {{ education.start_date }}</p>
+    <p>Major: {{ education.end_date }}</p>
+    <p>GPA: {{ education.description }}</p>
+{% endfor %}
 
 {% endblock content %}
