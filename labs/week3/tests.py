@@ -22,4 +22,4 @@ print("\nSeventh Function: Three Times Number\n")
 print (lab3.three_times_nums([1,20,15,5,10,17,34,45,13,65]))
 
 print("\nEigth Function: Keep Lowercase\n")
-print (lab3.keep_lowercase(['OrANge', 'AppLe', 'pear', 'StrawBerry', 'kiwi', 'apple', 'banana']))
+print (lab3.keep_lowercase(['ORANGE', 'APPLE', 'pear', 'STRAWBERRY', 'kiwi', 'apple', 'banana']))
