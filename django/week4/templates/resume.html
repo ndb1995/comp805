@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<h1>Education</h1>
+
+<!--
+Not sure if this is the proper way to comment our HTML code
+however...
+These two for loops loop on the dictionaries (as an object?)
+and allow us to access the attributes assocaited with that objects
+not much difference than declaring a class and associating
+attributes with it in a regular language like Java or C++
+. -->
+
+{% for education in all_education %}
+    <p>Insitution Name: {{ education.institution_name }}</p>
+    <p>Location: {{ education.location }}</p>
+    <p>Degree: {{ education.degree }}</p>
+    <p>Major: {{ education.major }}</p>
+    <p>GPA: {{ education.gpa }}</p>
+{% endfor %}
+
+<h1>Experience</h1>
+
+{% for experience in all_experience %}
+    <p>Title: {{ experience.title }}</p>
+    <p>Location: {{ experience.location }}</p>
+    <p>Start Date: {{ experience.start_date }}</p>
+    <p>End Date: {{ experience.end_date }}</p>
+    <p>Description: {{ experience.description }}</p>
+{% endfor %}
+
+
+</body>
+{% endblock content %}
