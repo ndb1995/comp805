@@ -14,8 +14,13 @@ and allow us to access the attributes assocaited with that objects
 not much difference than declaring a class and associating
 attributes with it in a regular language like Java or C++
 . -->
+<br><br><br><br>
+{% if resume_object %}
+    {{ resume_object.last_name_first_name }}
+    {{ resume_object.full_name }}
+{% endif %}
 
-{% for education in all_education %}
+{% for education in resume_object.get_education %}
     <p>Insitution Name: {{ education.institution_name }}</p>
     <p>Location: {{ education.location }}</p>
     <p>Degree: {{ education.degree }}</p>
@@ -25,7 +30,7 @@ attributes with it in a regular language like Java or C++
 
 <h1>Experience</h1>
 
-{% for experience in all_experience %}
+{% for experience in resume_object.get_experience %}
     <p>Title: {{ experience.title }}</p>
     <p>Location: {{ experience.location }}</p>
     <p>Start Date: {{ experience.start_date }}</p>

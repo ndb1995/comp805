@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from . models import education, experience
+from . models import education, experience, resume
 # Create your views here.
 def display_experience_education(request):
     """
@@ -10,7 +10,7 @@ def display_experience_education(request):
     Later in the html page, we will use a for loop
     to loop through the dictionaries and display the data
     """
-    all_education = education.objects.all()
-    all_experience = experience.objects.all()
-    context = {'all_education': all_education,'all_experience': all_experience,}
+
+    resume_object = resume.objects.get(pk=1)
+    context = {'resume_object':resume_object}
     return render(request, 'resume.html', context)
