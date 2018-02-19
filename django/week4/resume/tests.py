@@ -9,6 +9,10 @@ class ResumeTestCases(TestCase):
         my_resume = Resume(first_name="Joe", last_name="Smith")
         my_resume.save()
 
-    def test_last_name_first(self):
+    def test_last_name_first_name(self):
         r = Resume.objects.first()
-        self.assertEqual(r.last_name_first(),'Smith Joe')
+        self.assertEqual(r.last_name_first_name(),'Smith, Joe')
+
+    def test_full_name(self):
+        r = Resume.objects.first()
+        self.assertEqual(r.full_name(),'Joe Smith')
