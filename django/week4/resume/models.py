@@ -12,10 +12,10 @@ class Resume(models.Model):
         return "{} {}".format(self.first_name, self.last_name)
 
     def get_experience(self):
-        return "{} {}".format(self.last_name, self.first_name)
+        return self.experience_set.all()
 
     def get_education(self):
-        return "{} {}".format(self.last_name, self.first_name)
+        return self.education_set.all()
 
 class experience(models.Model):
     parent_resume = models.ForeignKey('Resume', on_delete=models.CASCADE, default=1)
