@@ -4,6 +4,13 @@
 
 {% block content %}
 
+<br><br><br><br>
+{% if resume_object %}
+    {{ resume_object.last_name_first_name }}
+    {{ resume_object.full_name }}
+{% endif %}
+
+
 <h1>Education</h1>
 
 <!--
@@ -14,11 +21,7 @@ and allow us to access the attributes assocaited with that objects
 not much difference than declaring a class and associating
 attributes with it in a regular language like Java or C++
 . -->
-<br><br><br><br>
-{% if resume_object %}
-    {{ resume_object.last_name_first_name }}
-    {{ resume_object.full_name }}
-{% endif %}
+
 
 {% for education in resume_object.get_education %}
     <p>Insitution Name: {{ education.institution_name }}</p>

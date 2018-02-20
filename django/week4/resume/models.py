@@ -18,7 +18,7 @@ class resume(models.Model):
         return self.education_set.all()
 
 class experience(models.Model):
-    parent_resume = models.ForeignKey('Resume', on_delete=models.CASCADE, default=1)
+    parent_resume = models.ForeignKey('resume', on_delete=models.CASCADE, default=1)
     title = models.CharField(max_length=255)
     location = models.CharField(max_length=255)
     start_date = models.CharField(max_length=255)
@@ -26,7 +26,7 @@ class experience(models.Model):
     description = models.TextField()
 
 class education(models.Model):
-    parent_resume = models.ForeignKey('Resume', on_delete=models.CASCADE, default=1)
+    parent_resume = models.ForeignKey('resume', on_delete=models.CASCADE, default=1)
     institution_name = models.CharField(max_length=255)
     location = models.CharField(max_length=255)
     degree = models.CharField(max_length=255)
