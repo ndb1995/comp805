@@ -5,6 +5,9 @@
 {% block content %}
 
 <br><br><br><br>
+<!--
+Just wanted to see if my methods worked correctly
+. -->
 {% if resume_object %}
     {{ resume_object.last_name_first_name }}
     {{ resume_object.full_name }}
@@ -14,12 +17,9 @@
 <h1>Education</h1>
 
 <!--
-Not sure if this is the proper way to comment our HTML code
-however...
-These two for loops loop on the dictionaries (as an object?)
-and allow us to access the attributes assocaited with that objects
-not much difference than declaring a class and associating
-attributes with it in a regular language like Java or C++
+More or less the same as before, except now we are
+looping over an education and experience object that got passed
+through from the foreign key realtions in the models
 . -->
 
 

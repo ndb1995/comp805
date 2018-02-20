@@ -5,21 +5,24 @@ class ResumeTestCases(TestCase):
     def setUp(self):
         """
         This runs at the beginning of every single test
+        Here we explicitly create new resume, experience and education objects
+        I also could have done self.resume, self.experience, self.educuation
+        If i did that I wouldn't have had to declare variables in the
+        testing functions. I could just refer to the object itself Instead
+        of assigning it to another variable, if I understand that correctly
         """
-        self.resume = resume.objects.create(
+        resume.objects.create(
             first_name='Nicholas',
             last_name='Bielinski',
         )
-        self.experience = experience.objects.create(
-            parent_resume=self.resume,
+        experience.objects.create(
             title='Helpdesk Technician',
             location='L3 Technologies',
             start_date='6/26/2017',
             end_date='present',
             description='blah blah blah'
         )
-        self.education = education.objects.create(
-            parent_resume=self.resume,
+        education.objects.create(
             institution_name='UNH Manchester',
             location='Manchester',
             degree='Bachelor',
@@ -28,26 +31,45 @@ class ResumeTestCases(TestCase):
         )
 
     def test_full_name(self):
-        '''
-
-        '''
-        self.assertEqual(resume.full_name(self.resume), 'Nicholas Bielinski')
+        """
+        This method will grab the first resume object
+        and compare it to our test case and what we expect
+        using the method defined in our resume model full_name
+        """
+        current_resume = resume.objects.first()
+        expected = 'Nicholas Bielinski'
+        case = current_resume.full_name()
+        self.assertEqual(case, expected)
 
     def test_last_name_first_name(self):
-        '''
-        '''
-        self.assertEqual(resume.last_name_first_name(self.resume), 'Bielinski, Nicholas')
+        """
+        This method will grab the first resume object
+        and compare it to our test case and what we expect
+        using the method defined in our resume model last_name_first_name
+        """
+        current_resume = resume.objects.first()
+        expected = 'Bielinski, Nicholas'
+        case = current_resume.last_name_first_name()
+        self.assertEqual(case, expected)
 
     def test_get_experience(self):
-        '''
-        '''
-        case = list(self.resume.get_experience())
-        expected = list(self.resume.experience_set.all())
+        """
+        This method will grab the first resume object
+        and compare it to our test case and what we expect
+        using the method defined in our resume model get_experience
+        """
+        current_resume = resume.objects.first()
+        expected = list(current_resume.get_experience())
+        case = list(current_resume.experience_set.all())
         self.assertEqual(case,expected)
 
     def test_get_education(self):
-        '''
-        '''
-        case = list(self.resume.get_education())
-        expected = list(self.resume.education_set.all())
+        """
+        This method will grab the first resume object
+        and compare it to our test case and what we expect
+        using the method defined in our resume model get_education
+        """
+        current_resume = resume.objects.first()
+        expected = list(current_resume.get_education())
+        case = list(current_resume.education_set.all())
         self.assertEqual(case,expected)

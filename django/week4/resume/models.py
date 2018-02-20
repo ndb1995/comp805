@@ -6,15 +6,34 @@ class resume(models.Model):
     last_name = models.CharField(max_length=64)
 
     def last_name_first_name(self):
+        """
+        This referes to whatever model object that is being used
+        and gets the last name and first name based off the model
+        attributes
+        """
         return "{}, {}".format(self.last_name, self.first_name)
 
     def full_name(self):
+        """
+        This referes to whatever model object that is being used
+        and gets the last name and first name based off the model
+        attributes. Basically the same as the above method
+        but formatted differently
+        """
         return "{} {}".format(self.first_name, self.last_name)
 
     def get_experience(self):
+        """
+        This method is uses the related manager in python and grabs all
+        experience objects that are realted the resume object
+        """
         return self.experience_set.all()
 
     def get_education(self):
+        """
+        This method is uses the related manager in python and grabs all
+        education objects that are realted the resume object
+        """
         return self.education_set.all()
 
 class experience(models.Model):
