@@ -52,10 +52,10 @@
 	</div>
 
 	<div id="prob4">
-		<p class='problem'>4. I like to say hi to people. There is an unorded list below and a button. When I click the button,
+		<p class='problem'>4. I like to say hi to people. There is an unordered list below and a button. When I click the button,
 			I want another list item to appear greeting a new person.</p>
-		<button>Say Hi!</button>
-		<ul></ul>
+		<button onclick="prob4()">Say Hi!</button>
+		<ul id="prob4_ul"></ul>
 	</div>
 
 	<div id="prob5">
@@ -72,7 +72,7 @@
 	</div>
 
 <script>
-	alert('Have fun! Submit by placing your finished file in workspace/labs/week6 and push to git. Collaborate via slack.');
+	// alert('Have fun! Submit by placing your finished file in workspace/labs/week6 and push to git. Collaborate via slack.');
 
 	function prob1() {
 		var change = document.getElementById("prob1_button");
@@ -96,6 +96,13 @@
 	function prob3(){
 		var change = document.getElementById("prob3_paragraph");
 			change.style.color = "pink"
+	}
+
+	function prob4(){
+		var ul = document.getElementById("prob4_ul");
+		var li = document.createElement("li");
+		li.appendChild(document.createTextNode("Nick"));
+		ul.appendChild(li);
 	}
 
 </script>
