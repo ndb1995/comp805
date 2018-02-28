@@ -115,11 +115,13 @@
 	function prob6(){
 		var url = "https://jsonplaceholder.typicode.com/";
 		fetch(url).then(function(response) {
-		  var ul = document.getElementById("prob6_ul");
-  		  var li = document.createElement("li");
-  		  li.appendChild(document.createTextNode(response.text()));
-  		  ul.appendChild(li);
-	  })
+			var ul = document.getElementById("prob6_ul");
+			var li = document.createElement("li");
+			response.text().then(function (text) {
+				li.appendChild(document.createTextNode(text));
+				ul.appendChild(li);
+			});
+		})
 	}
 </script>
 </body>
