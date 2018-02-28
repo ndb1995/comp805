@@ -117,6 +117,8 @@
 		fetch(url).then(function(response) {
 			var ul = document.getElementById("prob6_ul");
 			var li = document.createElement("li");
+			// need to grab the text. response.text() returns a promise object, I need to take
+			// the text and do somethin with it, or else it will just print promise object
 			response.text().then(function (text) {
 				li.appendChild(document.createTextNode(text));
 				ul.appendChild(li);
